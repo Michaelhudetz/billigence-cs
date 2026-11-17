@@ -1,0 +1,319 @@
+# What the Guardian league-table data means: the things it describes, its columns, its measures, and the words people use for them.
+# Metric definitions ("what does value added mean?") are answered from this file by code, never by the LLM.
+# The LLM sees this file only to write SQL.
+
+entities:
+  - id: university
+    description: A real higher-education institution. A renamed university keeps one id across years; a merged one gets a new id.
+    key: university_id
+    views: [clean.overall_ranking, clean.subject_ranking, clean.dim_university]
+  - id: subject_area
+    description: A Guardian subject table (e.g. Law, Medicine). Names changed in the 2015 restructure; every name has its own id.
+    key: subject_id
+    views: [clean.subject_ranking, clean.dim_subject]
+  - id: ranking_year
+    description: The Guardian ranking year. Only 2013, 2014 and 2015 exist. If a question gives no year, 2015 is used.
+    key: year
+    views: [clean.overall_ranking, clean.subject_ranking]
+
+dimensions:
+  - { id: year, column: year, type: integer, views: [clean.overall_ranking, clean.subject_ranking],
+      description: "Guardian ranking year: 2013, 2014 or 2015." }
+  - { id: university_id, column: university_id, type: text, views: [clean.overall_ranking, clean.subject_ranking, clean.dim_university],
+      description: Stable university id. Filter on this with the exact ids given in the prompt. }
+  - { id: university_name, column: university_name, type: text, views: [clean.overall_ranking, clean.subject_ranking],
+      description: Display name of the university. Use it for output, not for filtering. }
+  - { id: subject_id, column: subject_id, type: text, views: [clean.subject_ranking, clean.dim_subject],
+      description: Stable subject id. Filter on this with the exact ids given in the prompt. }
+  - { id: subject_name, column: subject_name, type: text, views: [clean.subject_ranking],
+      description: Display name of the subject. Use it for output, not for filtering. }
+  - { id: prev_rank_source, column: prev_rank_source, type: text, views: [clean.overall_ranking, clean.subject_ranking],
+      description: "Where prev_rank comes from: publisher, corrected, derived, or NULL. Select it whenever prev_rank or places_climbed is selected." }
+  - { id: dq_note, column: dq_note, type: text, views: [clean.overall_ranking, clean.subject_ranking],
+      description: Data-quality note for the row (NULL if the row was not changed). Always select it. }
+  - { id: canonical_name, column: canonical_name, type: text, views: [clean.dim_university],
+      description: Display name of the university in the lookup table. }
+  - { id: successor_of, column: successor_of, type: "text[]", views: [clean.dim_university],
+      description: "Ids this university was formed from by merger (south_wales <- glamorgan, newport)." }
+  - { id: valid_from_year, column: valid_from_year, type: integer, views: [clean.dim_university],
+      description: First ranking year the university appears in the data. }
+  - { id: valid_to_year, column: valid_to_year, type: integer, views: [clean.dim_university],
+      description: Last ranking year the university appears in the data. }
+  - { id: subject_lookup_name, column: name, type: text, views: [clean.dim_subject],
+      description: Subject name in the lookup table. }
+  - { id: first_year, column: first_year, type: integer, views: [clean.dim_subject],
+      description: First year the subject appears. }
+  - { id: last_year, column: last_year, type: integer, views: [clean.dim_subject],
+      description: Last year the subject appears. }
+  - { id: lineage_group, column: lineage_group, type: text, views: [clean.dim_subject],
+      description: Subjects that replaced each other across years share a lineage group. }
+  - { id: lineage_note, column: lineage_note, type: text, views: [clean.dim_subject],
+      description: Plain-English explanation of a subject's renames and splits. }
+
+metrics:
+  - id: rank
+    label: Guardian rank
+    description: The university's position in that year's Guardian table, ordered by Guardian score. 1 is the top. In subject tables, several universities can share a rank.
+    unit: position
+    scale: 1 = best
+    direction: lower_is_better
+    null_caveat: null
+    needs_review: false
+    columns: { clean.overall_ranking: rank, clean.subject_ranking: rank }
+
+  - id: prev_rank
+    label: Previous year's rank
+    description: >
+      The university's rank in the previous year's table. Usually the Guardian's own figure. In 48 rows it was corrected or filled
+      in from last year's table; prev_rank_source says which.
+    unit: position
+    scale: 1 = best
+    direction: lower_is_better
+    null_caveat: >
+      Empty in 2013 (there is no 2012 data), for subjects new in 2015, and for 5 subjects where the Guardian gave no previous
+      ranks in 2015 (Drama and dance, Earth and marine sciences, two Engineering subjects, Social policy).
+    needs_review: false
+    columns: { clean.overall_ranking: prev_rank, clean.subject_ranking: prev_rank }
+
+  - id: places_climbed
+    label: Places climbed
+    description: >
+      How many places the university moved up since the previous year: previous rank minus current rank. Positive means it
+      improved, negative means it dropped. (The original data's "rank change" column has the opposite sign and is not used.)
+    unit: places
+    scale: positive = improved, negative = dropped
+    direction: higher_is_better
+    null_caveat: Empty whenever the previous rank is empty.
+    needs_review: false
+    columns: { clean.overall_ranking: places_climbed, clean.subject_ranking: places_climbed }
+
+  - id: guardian_score
+    label: Guardian score
+    description: >
+      The Guardian's overall score out of 100, combining the measures below with fixed weights. The top institution in each table
+      scores 100 and the others are scaled relative to it. Ranks are ordered by this score.
+    unit: score
+    scale: 0-100
+    direction: higher_is_better
+    null_caveat: null
+    needs_review: false
+    columns: { clean.overall_ranking: guardian_score, clean.subject_ranking: guardian_score }
+
+  - id: nss_teaching
+    label: Satisfied with teaching
+    description: Percentage of final-year students who said they were satisfied with the teaching on their course, from the National Student Survey (NSS).
+    unit: percent
+    scale: 0-100
+    direction: higher_is_better
+    null_caveat: Missing for Abertay Dundee in the 2013 overall table and in 57 subject rows.
+    needs_review: false
+    columns: { clean.overall_ranking: nss_teaching, clean.subject_ranking: nss_teaching }
+
+  - id: nss_overall
+    label: Satisfied overall with course
+    description: Percentage of final-year students who said they were satisfied with their course overall, from the National Student Survey (NSS).
+    unit: percent
+    scale: 0-100
+    direction: higher_is_better
+    null_caveat: Missing for Abertay Dundee in the 2013 overall table and in 57 subject rows.
+    needs_review: false
+    columns: { clean.overall_ranking: nss_overall, clean.subject_ranking: nss_overall }
+
+  - id: nss_feedback
+    label: Satisfied with feedback and assessment
+    description: >
+      Percentage of final-year students who said they were satisfied with the assessment and feedback on their work, from the
+      National Student Survey (NSS). Called "NSS Feedback" in the overall table and "% Satisfied with Assessment" in the subject tables.
+    unit: percent
+    scale: 0-100
+    direction: higher_is_better
+    null_caveat: Missing for Abertay Dundee in the 2013 overall table and in 57 subject rows.
+    needs_review: false
+    columns: { clean.overall_ranking: nss_feedback, clean.subject_ranking: nss_feedback }
+
+  - id: expenditure_per_student
+    label: Spend per student
+    description: How much the university spends on each student, excluding academic staff costs, turned into a score out of 10.
+    unit: points out of 10
+    scale: 0-10. A decimal in the overall table; whole points from 1 to 10 in the subject tables.
+    direction: higher_is_better
+    null_caveat: Missing for University Campus Suffolk in all three overall tables, and in 192 subject rows.
+    needs_review: false
+    columns: { clean.overall_ranking: expenditure_per_student, clean.subject_ranking: expenditure_per_student }
+
+  - id: student_staff_ratio
+    label: Student to staff ratio
+    description: Number of students for each member of teaching staff. Lower is better, because it means more staff time per student.
+    unit: students per member of staff
+    scale: decimal, lower is better
+    direction: lower_is_better
+    null_caveat: Missing in 117 subject rows.
+    needs_review: false
+    columns: { clean.overall_ranking: student_staff_ratio, clean.subject_ranking: student_staff_ratio }
+
+  - id: career_prospects
+    label: Career prospects
+    description: >
+      Percentage of graduates who were in graduate-level jobs or further study six months after graduating, from the national
+      Destinations of Leavers from Higher Education survey.
+    unit: percent
+    scale: 0-100
+    direction: higher_is_better
+    null_caveat: Missing in 1,873 subject rows (about 23%), so subject rankings by career prospects leave many universities out.
+    needs_review: false
+    columns: { clean.overall_ranking: career_prospects, clean.subject_ranking: career_prospects }
+
+  - id: value_added
+    label: Value added score
+    description: >
+      Compares students' degree results with what their entry qualifications predicted, as a score out of 10. A high score means
+      students do better than expected from where they started.
+    unit: points out of 10
+    scale: 0-10. A decimal in the overall table; whole points from 1 to 10 in the subject tables.
+    direction: higher_is_better
+    null_caveat: Missing for Greenwich in the 2013 overall table, and in 681 subject rows.
+    needs_review: false
+    columns: { clean.overall_ranking: value_added, clean.subject_ranking: value_added }
+
+  - id: entry_tariff
+    label: Average entry tariff
+    description: >
+      The average UCAS tariff points of new students, i.e. how high the qualifications of the people who actually got in were.
+      It is not the entry requirement, but a high tariff usually means a selective university.
+    unit: UCAS tariff points
+    scale: average points. A decimal in the overall table; whole points in the subject tables.
+    direction: higher_is_better
+    null_caveat: Missing in 111 subject rows.
+    needs_review: false
+    columns: { clean.overall_ranking: entry_tariff, clean.subject_ranking: entry_tariff }
+
+joins:
+  - { from: clean.overall_ranking, to: clean.dim_university, on: [university_id], description: Each overall row belongs to one university. }
+  - { from: clean.subject_ranking, to: clean.dim_university, on: [university_id], description: Each subject row belongs to one university. }
+  - { from: clean.subject_ranking, to: clean.dim_subject, on: [subject_id], description: Each subject row belongs to one subject. }
+  - { from: clean.subject_ranking, to: clean.overall_ranking, on: [university_id, year],
+      description: "Many subject rows map to one overall row: the same university in the same year." }
+
+synonyms:
+  ranking: rank
+  position: rank
+  place: rank
+  league position: rank
+  overall rank: rank
+  ranked: rank
+  previous rank: prev_rank
+  last year's rank: prev_rank
+  rank last year: prev_rank
+  improvement: places_climbed
+  improved: places_climbed
+  climbed: places_climbed
+  rise: places_climbed
+  moved up: places_climbed
+  movement: places_climbed
+  rank change: places_climbed
+  overall score: guardian_score
+  total score: guardian_score
+  score: guardian_score
+  teaching satisfaction: nss_teaching
+  nss teaching: nss_teaching
+  teaching quality: nss_teaching
+  teaching: nss_teaching
+  overall satisfaction: nss_overall
+  student satisfaction: nss_overall
+  course satisfaction: nss_overall
+  nss overall: nss_overall
+  satisfaction: nss_overall
+  feedback: nss_feedback
+  nss feedback: nss_feedback
+  assessment: nss_feedback
+  assessment and feedback: nss_feedback
+  satisfied with assessment: nss_feedback
+  spend per student: expenditure_per_student
+  spending per student: expenditure_per_student
+  expenditure: expenditure_per_student
+  spending: expenditure_per_student
+  ssr: student_staff_ratio
+  staff ratio: student_staff_ratio
+  student to staff ratio: student_staff_ratio
+  student-staff ratio: student_staff_ratio
+  students per staff: student_staff_ratio
+  class size: student_staff_ratio
+  graduate prospects: career_prospects
+  employability: career_prospects
+  graduate jobs: career_prospects
+  employment rate: career_prospects
+  jobs after graduation: career_prospects
+  value-added: value_added
+  added value: value_added
+  ucas points: entry_tariff
+  ucas tariff: entry_tariff
+  entry standards: entry_tariff
+  tariff: entry_tariff
+  entry grades: entry_tariff
+  entry requirements: entry_tariff
+  edition: year
+  ranking year: year
+  university: university_id
+  uni: university_id
+  institution: university_id
+  subject: subject_id
+  subject area: subject_id
+  course: subject_id
+
+example_queries:
+  - id: rank_lookup
+    question: Which university ranks 2nd in 2015?
+    sql: |
+      SELECT university_name, rank, guardian_score, dq_note
+      FROM clean.overall_ranking
+      WHERE year = 2015 AND rank = 2
+  - id: nth_by_metric
+    question: Which university is 2nd for teaching satisfaction in 2015?
+    sql: |
+      WITH ranked AS (
+        SELECT university_name, nss_teaching, dq_note,
+               RANK() OVER (ORDER BY nss_teaching DESC) AS metric_rank
+        FROM clean.overall_ranking
+        WHERE year = 2015 AND nss_teaching IS NOT NULL
+      )
+      SELECT university_name, nss_teaching, metric_rank, dq_note
+      FROM ranked
+      WHERE metric_rank = 2
+  - id: best_lower_is_better
+    question: Which university has the best student to staff ratio in 2015?
+    sql: |
+      WITH ranked AS (
+        SELECT university_name, student_staff_ratio, dq_note,
+               RANK() OVER (ORDER BY student_staff_ratio ASC) AS metric_rank
+        FROM clean.overall_ranking
+        WHERE year = 2015 AND student_staff_ratio IS NOT NULL
+      )
+      SELECT university_name, student_staff_ratio, metric_rank, dq_note
+      FROM ranked
+      WHERE metric_rank = 1
+  - id: most_improved
+    question: Which university improved the most between 2014 and 2015?
+    sql: |
+      WITH ranked AS (
+        SELECT university_name, rank, prev_rank, places_climbed, prev_rank_source, dq_note,
+               RANK() OVER (ORDER BY places_climbed DESC) AS metric_rank
+        FROM clean.overall_ranking
+        WHERE year = 2015 AND places_climbed IS NOT NULL
+      )
+      SELECT university_name, rank, prev_rank, places_climbed, prev_rank_source, dq_note
+      FROM ranked
+      WHERE metric_rank = 1
+  - id: group_comparison
+    question: How did Oxbridge do in 2015?
+    sql: |
+      SELECT university_name, rank, guardian_score, dq_note
+      FROM clean.overall_ranking
+      WHERE year = 2015 AND university_id IN ('oxford', 'cambridge')
+      ORDER BY rank
+  - id: subject_top_n
+    question: Top 5 universities for Computer Science in 2015
+    sql: |
+      SELECT university_name, subject_name, rank, guardian_score, dq_note
+      FROM clean.subject_ranking
+      WHERE year = 2015 AND subject_id = 'computer_science_and_information_systems' AND rank <= 5
+      ORDER BY rank, university_name

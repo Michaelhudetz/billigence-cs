@@ -1,0 +1,160 @@
+- { id: aberdeen, canonical_name: Aberdeen, source_names: [Aberdeen], aliases: [University of Aberdeen], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: abertay_dundee, canonical_name: Abertay Dundee, source_names: [Abertay Dundee], aliases: [Abertay, Abertay University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: aberystwyth, canonical_name: Aberystwyth, source_names: [Aberystwyth], aliases: [Aberystwyth University, Aber], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: anglia_ruskin, canonical_name: Anglia Ruskin, source_names: [Anglia Ruskin], aliases: [ARU, Anglia Ruskin University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: arts_university_bournemouth, canonical_name: Arts University Bournemouth, source_names: ["Arts UC, Bournemouth", Arts University Bournemouth], aliases: [AUB, Arts University College Bournemouth], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: aston, canonical_name: Aston, source_names: [Aston], aliases: [Aston University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: bangor, canonical_name: Bangor, source_names: [Bangor], aliases: [Bangor University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: bath, canonical_name: Bath, source_names: [Bath], aliases: [University of Bath], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: bath_spa, canonical_name: Bath Spa, source_names: [Bath Spa], aliases: [Bath Spa University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: bedfordshire, canonical_name: Bedfordshire, source_names: [Bedfordshire], aliases: [University of Bedfordshire], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: birkbeck, canonical_name: Birkbeck, source_names: [Birkbeck], aliases: [Birkbeck University of London], valid_from_year: 2015, valid_to_year: 2015 }
+- { id: birmingham, canonical_name: Birmingham, source_names: [Birmingham], aliases: [University of Birmingham], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: birmingham_city, canonical_name: Birmingham City, source_names: [Birmingham City], aliases: [BCU, Birmingham City University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: bishop_grosseteste, canonical_name: Bishop Grosseteste, source_names: [Bishop Grosseteste, Bishop Grosseteste UC], aliases: [Bishop Grosseteste University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: bolton, canonical_name: Bolton, source_names: [Bolton], aliases: [University of Bolton], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: bournemouth, canonical_name: Bournemouth, source_names: [Bournemouth], aliases: [Bournemouth University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: bradford, canonical_name: Bradford, source_names: [Bradford], aliases: [University of Bradford], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: brighton, canonical_name: Brighton, source_names: [Brighton], aliases: [University of Brighton], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: brighton_sussex_medical_school, canonical_name: Brighton Sussex Medical School, source_names: [Brighton Sussex Medical School], aliases: [BSMS], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: bristol, canonical_name: Bristol, source_names: [Bristol], aliases: [University of Bristol], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: brunel, canonical_name: Brunel, source_names: [Brunel], aliases: [Brunel University London], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: buckingham, canonical_name: Buckingham, source_names: [Buckingham], aliases: [University of Buckingham], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: bucks_new, canonical_name: Bucks New University, source_names: [Bucks New University], aliases: [Buckinghamshire New University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: cambridge, canonical_name: Cambridge, source_names: [Cambridge], aliases: [University of Cambridge, Cantab], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: canterbury_christ_church, canonical_name: Canterbury Christ Church, source_names: [Canterbury Christ Church], aliases: [CCCU, Canterbury Christ Church University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: cardiff, canonical_name: Cardiff, source_names: [Cardiff], aliases: [Cardiff University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: cardiff_met, canonical_name: Cardiff Met, source_names: [Cardiff Met], aliases: [Cardiff Metropolitan University, UWIC], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: central_lancashire, canonical_name: Central Lancashire, source_names: [Central Lancashire], aliases: [UCLan, University of Central Lancashire], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: royal_central_school_speech_drama, canonical_name: Royal Central School of Speech & Drama, source_names: [Central School of Speech and Drama, Royal Central School of Speech & Drama], aliases: [Central School of Speech and Drama, RCSSD], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: chester, canonical_name: Chester, source_names: [Chester], aliases: [University of Chester], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: chichester, canonical_name: Chichester, source_names: [Chichester], aliases: [University of Chichester], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: city, canonical_name: City, source_names: [City], aliases: [City University London, City University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: conservatoire_dance_drama, canonical_name: Conservatoire for Dance and Drama, source_names: [Conservatoire for Dance and Drama], aliases: [CDD], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: courtauld, canonical_name: Courtauld Institute, source_names: [Courtauld Institute], aliases: [Courtauld, Courtauld Institute of Art], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: coventry, canonical_name: Coventry, source_names: [Coventry], aliases: [Coventry University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: cumbria, canonical_name: Cumbria, source_names: [Cumbria], aliases: [University of Cumbria], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: de_montfort, canonical_name: De Montfort, source_names: [De Montfort], aliases: [DMU, De Montfort University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: derby, canonical_name: Derby, source_names: [Derby], aliases: [University of Derby], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: dundee, canonical_name: Dundee, source_names: [Dundee], aliases: [University of Dundee], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: durham, canonical_name: Durham, source_names: [Durham], aliases: [Durham University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: east_london, canonical_name: East London, source_names: [East London], aliases: [UEL, University of East London], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: edge_hill, canonical_name: Edge Hill, source_names: [Edge Hill], aliases: [Edge Hill University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: edinburgh, canonical_name: Edinburgh, source_names: [Edinburgh], aliases: [University of Edinburgh], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: edinburgh_napier, canonical_name: Edinburgh Napier, source_names: [Edinburgh Napier], aliases: [Napier, Edinburgh Napier University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: essex, canonical_name: Essex, source_names: [Essex], aliases: [University of Essex], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: exeter, canonical_name: Exeter, source_names: [Exeter], aliases: [University of Exeter], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: falmouth, canonical_name: Falmouth, source_names: [UC Falmouth, Falmouth], aliases: [Falmouth University, University College Falmouth], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: glamorgan, canonical_name: Glamorgan, source_names: [Glamorgan], aliases: [University of Glamorgan], valid_from_year: 2013, valid_to_year: 2013 }
+- { id: glasgow, canonical_name: Glasgow, source_names: [Glasgow], aliases: [University of Glasgow], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: glasgow_caledonian, canonical_name: Glasgow Caledonian, source_names: [Glasgow Caledonian], aliases: [GCU, Glasgow Caledonian University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: glasgow_school_of_art, canonical_name: Glasgow School of Art, source_names: [Glasgow School of Art], aliases: [GSA], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: gloucestershire, canonical_name: Gloucestershire, source_names: [Gloucestershire], aliases: [University of Gloucestershire], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: glyndwr, canonical_name: Glyndwr, source_names: [Glyndwr], aliases: [Glyndwr University, Wrexham Glyndwr], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: goldsmiths, canonical_name: Goldsmiths, source_names: [Goldsmiths], aliases: [Goldsmiths University of London], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: greenwich, canonical_name: Greenwich, source_names: [Greenwich], aliases: [University of Greenwich], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: guildhall, canonical_name: Guildhall School of Music and Drama, source_names: [Guildhall School of Music and Drama], aliases: [Guildhall, GSMD], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: harper_adams, canonical_name: Harper Adams, source_names: [Harper Adams, Harper Adams UC], aliases: [Harper Adams University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: heriot_watt, canonical_name: Heriot-Watt, source_names: [Heriot-Watt], aliases: [Heriot Watt, Heriot-Watt University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: hertfordshire, canonical_name: Hertfordshire, source_names: [Hertfordshire], aliases: [University of Hertfordshire, Herts], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: heythrop, canonical_name: Heythrop College, source_names: [Heythrop College], aliases: [Heythrop], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: highlands_islands, canonical_name: Highlands & Islands, source_names: [Highlands & Islands], aliases: [UHI, University of the Highlands and Islands], valid_from_year: 2015, valid_to_year: 2015 }
+- { id: huddersfield, canonical_name: Huddersfield, source_names: [Huddersfield], aliases: [University of Huddersfield], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: hull, canonical_name: Hull, source_names: [Hull], aliases: [University of Hull], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: hull_york_medical_school, canonical_name: Hull York Medical School, source_names: [Hull York Medical School], aliases: [HYMS], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: imperial, canonical_name: Imperial College, source_names: [Imperial College], aliases: [Imperial, Imperial College London], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: keele, canonical_name: Keele, source_names: [Keele], aliases: [Keele University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: kent, canonical_name: Kent, source_names: [Kent], aliases: [University of Kent], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: kings_college_london, canonical_name: "King's College London", source_names: ["King's College London"], aliases: [KCL, "King's"], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: kingston, canonical_name: Kingston, source_names: [Kingston], aliases: [Kingston University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: kingston_st_georges, canonical_name: "Kingston - St George's University", source_names: ["Kingston - St George's University"], aliases: ["Kingston and St George's"], valid_from_year: 2014, valid_to_year: 2015 }
+- { id: lancaster, canonical_name: Lancaster, source_names: [Lancaster], aliases: [Lancaster University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: leeds, canonical_name: Leeds, source_names: [Leeds], aliases: [University of Leeds], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: leeds_college_of_art, canonical_name: Leeds College of Art, source_names: [Leeds College of Art], aliases: [], valid_from_year: 2014, valid_to_year: 2015 }
+- { id: leeds_college_of_music, canonical_name: Leeds College of Music, source_names: [Leeds College of Music], aliases: [], valid_from_year: 2013, valid_to_year: 2013 }
+- { id: leeds_met, canonical_name: Leeds Met, source_names: [Leeds Met], aliases: [Leeds Metropolitan University, Leeds Beckett, Leeds Beckett University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: leeds_trinity, canonical_name: Leeds Trinity, source_names: [Leeds Trinity, Leeds Trinity University College], aliases: [Leeds Trinity University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: leicester, canonical_name: Leicester, source_names: [Leicester], aliases: [University of Leicester], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: lincoln, canonical_name: Lincoln, source_names: [Lincoln], aliases: [University of Lincoln], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: liverpool, canonical_name: Liverpool, source_names: [Liverpool], aliases: [University of Liverpool], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: liverpool_john_moores, canonical_name: Liverpool John Moores, source_names: [Liverpool John Moores], aliases: [LJMU, John Moores], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: lipa, canonical_name: The Liverpool Institute for Performing Arts, source_names: [The Liverpool Institute for Performing Arts], aliases: [LIPA], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: london_met, canonical_name: London Met, source_names: [London Met], aliases: [London Metropolitan University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: lse, canonical_name: London School of Economics, source_names: [London School of Economics], aliases: [LSE, London School of Economics and Political Science], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: london_south_bank, canonical_name: London South Bank, source_names: [London South Bank], aliases: [LSBU, London South Bank University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: loughborough, canonical_name: Loughborough, source_names: [Loughborough], aliases: [Loughborough University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: manchester, canonical_name: Manchester, source_names: [Manchester], aliases: [University of Manchester], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: manchester_met, canonical_name: Manchester Met, source_names: [Manchester Met], aliases: [MMU, Manchester Metropolitan University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: manchester_school_of_architecture, canonical_name: Manchester School of Architecture, source_names: [Manchester School of Architecture], aliases: [MSA], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: marjon, canonical_name: St Mark and St John, source_names: [Marjon (St Mark and St John), St Mark and St John], aliases: [Marjon, Plymouth Marjon], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: medway_school_of_pharmacy, canonical_name: Medway School of Pharmacy, source_names: [Medway School of Pharmacy], aliases: [], valid_from_year: 2015, valid_to_year: 2015 }
+- { id: middlesex, canonical_name: Middlesex, source_names: [Middlesex], aliases: [Middlesex University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: newcastle, canonical_name: Newcastle, source_names: [Newcastle], aliases: [Newcastle University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: newman, canonical_name: Newman University, source_names: [Newman University, Newman University College], aliases: [Newman], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: newport, canonical_name: Newport, source_names: [Newport], aliases: [University of Wales Newport], valid_from_year: 2013, valid_to_year: 2013 }
+- { id: northampton, canonical_name: Northampton, source_names: [Northampton], aliases: [University of Northampton], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: northumbria, canonical_name: Northumbria, source_names: [Northumbria], aliases: [Northumbria University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: norwich_university_of_the_arts, canonical_name: Norwich University of the Arts, source_names: [Norwich UC of the Arts, Norwich University of the Arts], aliases: [NUA], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: nottingham, canonical_name: Nottingham, source_names: [Nottingham], aliases: [University of Nottingham], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: nottingham_trent, canonical_name: Nottingham Trent, source_names: [Nottingham Trent], aliases: [NTU, Nottingham Trent University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: oxford, canonical_name: Oxford, source_names: [Oxford], aliases: [University of Oxford, Oxon], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: oxford_brookes, canonical_name: Oxford Brookes, source_names: [Oxford Brookes], aliases: [Brookes, Oxford Brookes University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: peninsula_medical_school, canonical_name: Peninsula Medical School, source_names: [Peninsula Medical School], aliases: [Peninsula College of Medicine and Dentistry], valid_from_year: 2013, valid_to_year: 2013 }
+- { id: plymouth, canonical_name: Plymouth, source_names: [Plymouth], aliases: [Plymouth University, University of Plymouth], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: portsmouth, canonical_name: Portsmouth, source_names: [Portsmouth], aliases: [University of Portsmouth], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: queen_margaret, canonical_name: Queen Margaret, source_names: [Queen Margaret], aliases: [Queen Margaret University, QMU], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: queen_mary, canonical_name: Queen Mary, source_names: [Queen Mary], aliases: [QMUL, Queen Mary University of London], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: queens_belfast, canonical_name: "Queen's, Belfast", source_names: ["Queen's, Belfast"], aliases: ["Queen's University Belfast", QUB, "Queen's Belfast"], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: ravensbourne, canonical_name: Ravensbourne, source_names: [Ravensbourne], aliases: [], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: reading, canonical_name: Reading, source_names: [Reading], aliases: [University of Reading], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: robert_gordon, canonical_name: Robert Gordon, source_names: [Robert Gordon], aliases: [RGU, Robert Gordon University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: roehampton, canonical_name: Roehampton, source_names: [Roehampton], aliases: [University of Roehampton], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: rose_bruford, canonical_name: Rose Bruford College, source_names: [Rose Bruford College], aliases: [Rose Bruford], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: royal_academy_of_music, canonical_name: Royal Academy of Music, source_names: [Royal Academy of Music], aliases: [RAM], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: royal_agricultural_university, canonical_name: Royal Agricultural University, source_names: [Royal Agricultural College, Royal Agricultural University], aliases: [RAU, Royal Agricultural College], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: royal_college_of_music, canonical_name: Royal College of Music, source_names: [Royal College of Music], aliases: [RCM], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: royal_conservatoire_of_scotland, canonical_name: Royal Conservatoire of Scotland, source_names: [Royal Conservatoire of Scotland], aliases: [RCS], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: royal_holloway, canonical_name: Royal Holloway, source_names: [Royal Holloway], aliases: [RHUL, Royal Holloway University of London], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: royal_northern_college_of_music, canonical_name: Royal Northern College of Music, source_names: [Royal Northern College of Music], aliases: [RNCM], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: royal_veterinary_college, canonical_name: Royal Veterinary College, source_names: [Royal Veterinary College], aliases: [RVC], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: royal_welsh_college, canonical_name: Royal Welsh College, source_names: [Royal Welsh College], aliases: [Royal Welsh College of Music & Drama, RWCMD], valid_from_year: 2014, valid_to_year: 2015 }
+- { id: salford, canonical_name: Salford, source_names: [Salford], aliases: [University of Salford], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: sruc, canonical_name: SRUC, source_names: [Scottish Agricultural College, SRUC], aliases: [Scotland's Rural College, Scottish Agricultural College], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: sheffield, canonical_name: Sheffield, source_names: [Sheffield], aliases: [University of Sheffield], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: sheffield_hallam, canonical_name: Sheffield Hallam, source_names: [Sheffield Hallam], aliases: [SHU, Sheffield Hallam University, Hallam], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: soas, canonical_name: SOAS, source_names: [SOAS], aliases: [School of Oriental and African Studies, SOAS University of London], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: south_wales, canonical_name: South Wales, source_names: [South Wales], aliases: [University of South Wales, USW], successor_of: [glamorgan, newport], valid_from_year: 2015, valid_to_year: 2015 }
+- { id: southampton, canonical_name: Southampton, source_names: [Southampton], aliases: [University of Southampton], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: southampton_solent, canonical_name: Southampton Solent, source_names: [Southampton Solent], aliases: [Solent, Solent University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: st_andrews, canonical_name: St Andrews, source_names: [St Andrews], aliases: [University of St Andrews, Saint Andrews], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: st_georges, canonical_name: "St George's, University of London", source_names: ["St George's Medical School", "St George's, UoL"], aliases: ["St George's", "St George's Medical School"], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: st_marys_belfast, canonical_name: "St Mary's UC, Belfast", source_names: ["St Mary's UC, Belfast"], aliases: ["St Mary's University College Belfast"], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: st_marys_twickenham, canonical_name: "St Mary's UC, Twickenham", source_names: ["St Mary's UC, Twickenham"], aliases: ["St Mary's University Twickenham", "St Mary's Twickenham"], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: staffordshire, canonical_name: Staffordshire, source_names: [Staffordshire], aliases: [Staffordshire University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: stirling, canonical_name: Stirling, source_names: [Stirling], aliases: [University of Stirling], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: stranmillis, canonical_name: Stranmillis UC, source_names: [Stranmillis UC], aliases: [Stranmillis, Stranmillis University College], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: strathclyde, canonical_name: Strathclyde, source_names: [Strathclyde], aliases: [University of Strathclyde], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: sunderland, canonical_name: Sunderland, source_names: [Sunderland], aliases: [University of Sunderland], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: surrey, canonical_name: Surrey, source_names: [Surrey], aliases: [University of Surrey], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: sussex, canonical_name: Sussex, source_names: [Sussex], aliases: [University of Sussex], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: swansea, canonical_name: Swansea, source_names: [Swansea], aliases: [Swansea University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: teesside, canonical_name: Teesside, source_names: [Teesside], aliases: [Teesside University], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: trinity_laban, canonical_name: Trinity Laban Conservatoire, source_names: [Trinity Laban Conservatoire], aliases: [Trinity Laban], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: trinity_saint_david, canonical_name: Trinity Saint David, source_names: [Trinity Saint David], aliases: [University of Wales Trinity Saint David, UWTSD], valid_from_year: 2013, valid_to_year: 2014 }
+- { id: suffolk, canonical_name: University Campus Suffolk, source_names: [UC Suffolk, University Campus Suffolk], aliases: [UCS, University of Suffolk], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: ucl, canonical_name: UCL, source_names: [UCL], aliases: [University College London], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: uea, canonical_name: UEA, source_names: [UEA], aliases: [University of East Anglia, East Anglia], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: ulster, canonical_name: Ulster, source_names: [Ulster], aliases: [Ulster University, University of Ulster], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: university_college_birmingham, canonical_name: University College Birmingham, source_names: [University College Birmingham], aliases: [UCB], valid_from_year: 2013, valid_to_year: 2013 }
+- { id: creative_arts, canonical_name: University for the Creative Arts, source_names: [University for the Creative Arts], aliases: [UCA], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: arts_london, canonical_name: University of the Arts London, source_names: [University of the Arts London], aliases: [UAL, Arts London], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: uwe_bristol, canonical_name: UWE Bristol, source_names: [UWE Bristol], aliases: [UWE, University of the West of England], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: warwick, canonical_name: Warwick, source_names: [Warwick], aliases: [University of Warwick], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: west_london, canonical_name: West London, source_names: [West London], aliases: [UWL, University of West London], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: west_of_scotland, canonical_name: West of Scotland, source_names: [West of Scotland], aliases: [UWS, University of the West of Scotland], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: westminster, canonical_name: Westminster, source_names: [Westminster], aliases: [University of Westminster], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: winchester, canonical_name: Winchester, source_names: [Winchester], aliases: [University of Winchester], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: worcester, canonical_name: Worcester, source_names: [Worcester], aliases: [University of Worcester], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: writtle, canonical_name: Writtle College, source_names: [Writtle College], aliases: [Writtle], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: york, canonical_name: York, source_names: [York], aliases: [University of York], valid_from_year: 2013, valid_to_year: 2015 }
+- { id: york_st_john, canonical_name: York St John, source_names: [York St John], aliases: [York St John University, YSJ], valid_from_year: 2013, valid_to_year: 2015 }

@@ -1,0 +1,223 @@
+- id: archaeology_and_forensics
+  name: Archaeology and Forensics
+  first_year: 2013
+  last_year: 2013
+  lineage_group: archaeology
+  lineage_note: "Renamed Archaeology in 2014, then Forensic Science & Archaeology in 2015. Coverage changed, compare years with care."
+- id: archaeology
+  name: Archaeology
+  first_year: 2014
+  last_year: 2014
+  lineage_group: archaeology
+  lineage_note: "Was Archaeology and Forensics in 2013; became Forensic Science & Archaeology in 2015."
+- id: forensic_science_and_archaeology
+  name: Forensic Science & Archaeology
+  first_year: 2015
+  last_year: 2015
+  lineage_group: archaeology
+  lineage_note: "Successor of Archaeology (2014) and Archaeology and Forensics (2013). Not directly comparable."
+
+- id: tourism_transport_and_travel
+  name: Tourism, transport and travel
+  first_year: 2013
+  last_year: 2014
+  lineage_group: tourism
+  lineage_note: "Replaced in 2015 by Hospitality, Event Management & Tourism (broader scope)."
+- id: hospitality_event_management_and_tourism
+  name: Hospitality, Event Management & Tourism
+  first_year: 2015
+  last_year: 2015
+  lineage_group: tourism
+  lineage_note: "New in 2015, approximate successor of Tourism, transport and travel. Not directly comparable."
+
+- id: art_and_design
+  name: Art and design
+  first_year: 2013
+  last_year: 2014
+  lineage_group: art_and_design
+  lineage_note: "Split in 2015 into Art, Design & Crafts, and Fashion & Textiles (approximate)."
+- id: art
+  name: Art
+  first_year: 2015
+  last_year: 2015
+  lineage_group: art_and_design
+  lineage_note: "New in 2015, split out of Art and design. Not directly comparable with 2013-14."
+- id: design_and_crafts
+  name: Design & Crafts
+  first_year: 2015
+  last_year: 2015
+  lineage_group: art_and_design
+  lineage_note: "New in 2015, split out of Art and design. Not directly comparable with 2013-14."
+- id: fashion_and_textiles
+  name: Fashion & Textiles
+  first_year: 2015
+  last_year: 2015
+  lineage_group: art_and_design
+  lineage_note: "New in 2015, split out of Art and design. Not directly comparable with 2013-14."
+
+- id: classics
+  name: Classics
+  first_year: 2013
+  last_year: 2014
+  lineage_group: classics
+  lineage_note: "Renamed Classics & Ancient History in 2015."
+- id: classics_and_ancient_history
+  name: Classics & Ancient History
+  first_year: 2015
+  last_year: 2015
+  lineage_group: classics
+  lineage_note: "Successor of Classics (2013-14). Broadly comparable but scope may differ."
+
+- id: english
+  name: English
+  first_year: 2013
+  last_year: 2014
+  lineage_group: english
+  lineage_note: "Renamed English & Creative Writing in 2015."
+- id: english_and_creative_writing
+  name: English & Creative Writing
+  first_year: 2015
+  last_year: 2015
+  lineage_group: english
+  lineage_note: "Successor of English (2013-14). Broadly comparable but scope may differ."
+
+- id: history_and_history_of_art
+  name: History and history of art
+  first_year: 2013
+  last_year: 2014
+  lineage_group: history
+  lineage_note: "Split in 2015 into History and History of Art."
+- id: history
+  name: History
+  first_year: 2015
+  last_year: 2015
+  lineage_group: history
+  lineage_note: "New in 2015, split out of History and history of art. Not directly comparable with 2013-14."
+- id: history_of_art
+  name: History of Art
+  first_year: 2015
+  last_year: 2015
+  lineage_group: history
+  lineage_note: "New in 2015, split out of History and history of art. Not directly comparable with 2013-14."
+
+- id: media_studies_communications_and_librarianship
+  name: Media studies, communications and librarianship
+  first_year: 2013
+  last_year: 2014
+  lineage_group: media
+  lineage_note: "Split in 2015 into Media & Film Studies; Journalism, Publishing & Public Relations; Film Production & Photography."
+- id: media_and_film_studies
+  name: Media & Film Studies
+  first_year: 2015
+  last_year: 2015
+  lineage_group: media
+  lineage_note: "New in 2015, split out of Media studies, communications and librarianship. Not directly comparable."
+- id: journalism_publishing_and_public_relations
+  name: Journalism, Publishing & Public Relations
+  first_year: 2015
+  last_year: 2015
+  lineage_group: media
+  lineage_note: "New in 2015, split out of Media studies, communications and librarianship. Not directly comparable."
+- id: film_production_and_photography
+  name: Film Production & Photography
+  first_year: 2015
+  last_year: 2015
+  lineage_group: media
+  lineage_note: "New in 2015, split out of Media studies, communications and librarianship. Not directly comparable."
+
+- id: computer_sciences_and_it
+  name: Computer sciences and IT
+  first_year: 2013
+  last_year: 2014
+  lineage_group: computer_science
+  lineage_note: "Renamed Computer Science & Information Systems in 2015. 5 rows in 2015 still carried this old label and were relabelled (DQ4)."
+- id: computer_science_and_information_systems
+  name: Computer Science & Information Systems
+  first_year: 2015
+  last_year: 2015
+  lineage_group: computer_science
+  lineage_note: "Successor of Computer sciences and IT (2013-14). Includes 5 relabelled 2015 rows (DQ4)."
+
+- id: business_management_and_marketing
+  name: Business, Management & Marketing
+  first_year: 2013
+  last_year: 2015
+  lineage_group: business
+  lineage_note: "Present all years. From 2015 Accounting & Finance is ranked separately, so 2015 Business may not be directly comparable."
+- id: accounting_and_finance
+  name: Accounting & Finance
+  first_year: 2015
+  last_year: 2015
+  lineage_group: business
+  lineage_note: "New in 2015, split out of Business, Management & Marketing. No 2013-14 data."
+
+- id: health_professions
+  name: Health Professions
+  first_year: 2015
+  last_year: 2015
+  lineage_group: health_professions
+  lineage_note: "New in 2015 with no clear predecessor."
+
+- id: drama_and_dance
+  name: Drama and dance
+  first_year: 2013
+  last_year: 2015
+  lineage_group: drama_and_dance
+  lineage_note: "Source gives no previous-year ranks for 2015. Ranks from 2014 and 2015 can be shown side by side, but places climbed is not available for 2015."
+- id: earth_and_marine_sciences
+  name: Earth and marine sciences
+  first_year: 2013
+  last_year: 2015
+  lineage_group: earth_and_marine_sciences
+  lineage_note: "Source gives no previous-year ranks for 2015. Ranks from 2014 and 2015 can be shown side by side, but places climbed is not available for 2015."
+- id: engineering_electronic_and_electrical
+  name: "Engineering: electronic and electrical"
+  first_year: 2013
+  last_year: 2015
+  lineage_group: engineering_electronic_and_electrical
+  lineage_note: "Source gives no previous-year ranks for 2015. Ranks from 2014 and 2015 can be shown side by side, but places climbed is not available for 2015."
+- id: engineering_materials_and_mineral
+  name: "Engineering: materials and mineral"
+  first_year: 2013
+  last_year: 2015
+  lineage_group: engineering_materials_and_mineral
+  lineage_note: "Source gives no previous-year ranks for 2015. Ranks from 2014 and 2015 can be shown side by side, but places climbed is not available for 2015."
+- id: social_policy_and_administration
+  name: Social policy and administration
+  first_year: 2013
+  last_year: 2015
+  lineage_group: social_policy_and_administration
+  lineage_note: "Source gives no previous-year ranks for 2015. Ranks from 2014 and 2015 can be shown side by side, but places climbed is not available for 2015."
+
+- { id: agriculture_forestry_and_food, name: "Agriculture, Forestry & food", first_year: 2013, last_year: 2015 }
+- { id: american_studies, name: "American studies", first_year: 2013, last_year: 2015 }
+- { id: anatomy_and_physiology, name: "Anatomy & Physiology", first_year: 2013, last_year: 2015 }
+- { id: anthropology, name: "Anthropology", first_year: 2013, last_year: 2015 }
+- { id: architecture, name: "Architecture", first_year: 2013, last_year: 2015 }
+- { id: biosciences, name: "Biosciences", first_year: 2013, last_year: 2015 }
+- { id: building_and_town_and_country_planning, name: "Building and town and country planning", first_year: 2013, last_year: 2015 }
+- { id: chemistry, name: "Chemistry", first_year: 2013, last_year: 2015 }
+- { id: dentistry, name: "Dentistry", first_year: 2013, last_year: 2015 }
+- { id: economics, name: "Economics", first_year: 2013, last_year: 2015 }
+- { id: education, name: "Education", first_year: 2013, last_year: 2015 }
+- { id: engineering_chemical, name: "Engineering: Chemical", first_year: 2013, last_year: 2015 }
+- { id: engineering_civil, name: "Engineering: Civil", first_year: 2013, last_year: 2015 }
+- { id: engineering_general, name: "Engineering: general", first_year: 2013, last_year: 2015 }
+- { id: engineering_mechanical, name: "Engineering: mechanical", first_year: 2013, last_year: 2015 }
+- { id: geography_and_environmental_studies, name: "Geography & Environmental Studies", first_year: 2013, last_year: 2015 }
+- { id: law, name: "Law", first_year: 2013, last_year: 2015 }
+- { id: mathematics, name: "Mathematics", first_year: 2013, last_year: 2015 }
+- { id: medicine, name: "Medicine", first_year: 2013, last_year: 2015 }
+- { id: modern_languages_and_linguistics, name: "Modern Languages & Linguistics", first_year: 2013, last_year: 2015 }
+- { id: music, name: "Music", first_year: 2013, last_year: 2015 }
+- { id: nursing_and_midwifery, name: "Nursing & Midwifery", first_year: 2013, last_year: 2015 }
+- { id: pharmacy_and_pharmacology, name: "Pharmacy & Pharmacology", first_year: 2013, last_year: 2015 }
+- { id: philosophy, name: "Philosophy", first_year: 2013, last_year: 2015 }
+- { id: physics, name: "Physics", first_year: 2013, last_year: 2015 }
+- { id: politics, name: "Politics", first_year: 2013, last_year: 2015 }
+- { id: psychology, name: "Psychology", first_year: 2013, last_year: 2015 }
+- { id: religious_studies_and_theology, name: "Religious studies and theology", first_year: 2013, last_year: 2015 }
+- { id: social_work, name: "Social work", first_year: 2013, last_year: 2015 }
+- { id: sociology, name: "Sociology", first_year: 2013, last_year: 2015 }
+- { id: sports_science, name: "Sports science", first_year: 2013, last_year: 2015 }
+- { id: veterinary_science, name: "Veterinary science", first_year: 2013, last_year: 2015 }

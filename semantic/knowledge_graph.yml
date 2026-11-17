@@ -1,0 +1,153 @@
+groups:
+  - id: oxbridge
+    name: Oxbridge
+    aliases: [oxbridge, oxford and cambridge, oxford & cambridge]
+    members: [oxford, cambridge]
+    source: Common usage for the universities of Oxford and Cambridge.
+    review: reviewed
+
+  - id: russell_group
+    name: Russell Group
+    aliases: [russell group, the russell group, russell universities, russell]
+    members: [birmingham, bristol, cambridge, cardiff, durham, edinburgh, exeter, glasgow, imperial, kings_college_london,
+              leeds, liverpool, lse, manchester, newcastle, nottingham, oxford, queen_mary, queens_belfast, sheffield,
+              southampton, ucl, warwick, york]
+    source: Russell Group membership list (russellgroup.ac.uk), as of 2012-2015.
+    review: reviewed
+
+  - id: london
+    name: London
+    aliases: [london, london universities, in london, universities in london]
+    members: [birkbeck, brunel, city, conservatoire_dance_drama, courtauld, east_london, goldsmiths, greenwich, guildhall,
+              heythrop, imperial, kings_college_london, kingston, kingston_st_georges, london_met, lse, london_south_bank,
+              middlesex, queen_mary, ravensbourne, roehampton, rose_bruford, royal_academy_of_music,
+              royal_central_school_speech_drama, royal_college_of_music, royal_veterinary_college, soas, st_georges,
+              st_marys_twickenham, trinity_laban, ucl, arts_london, west_london, westminster]
+    source: Main campus location in Greater London (institution websites). Curated by the lead agent.
+    review: reviewed
+
+  - id: scotland
+    name: Scotland
+    aliases: [scotland, scottish, scottish universities]
+    members: [aberdeen, abertay_dundee, dundee, edinburgh, edinburgh_napier, glasgow, glasgow_caledonian, glasgow_school_of_art,
+              heriot_watt, highlands_islands, queen_margaret, robert_gordon, royal_conservatoire_of_scotland, sruc, st_andrews,
+              stirling, strathclyde, west_of_scotland]
+    source: Main campus location (institution websites). Curated by the lead agent.
+    review: reviewed
+
+  - id: wales
+    name: Wales
+    aliases: [wales, welsh, welsh universities]
+    members: [aberystwyth, bangor, cardiff, cardiff_met, glamorgan, glyndwr, newport, royal_welsh_college, south_wales, swansea,
+              trinity_saint_david]
+    source: Main campus location (institution websites). Curated by the lead agent.
+    review: reviewed
+
+  - id: northern_ireland
+    name: Northern Ireland
+    aliases: [northern ireland, ni, northern irish]
+    members: [queens_belfast, ulster, st_marys_belfast, stranmillis]
+    source: Main campus location (institution websites). Curated by the lead agent.
+    review: reviewed
+
+subject_aliases:
+  - aliases: [computer science, cs, comp sci, computing, computer sciences]
+    subject_ids: [computer_sciences_and_it, computer_science_and_information_systems]
+    source: Common names for the subject; ids from the DQ4 / 5.3 lineage.
+  - aliases: [business, management, marketing, business studies]
+    subject_ids: [business_management_and_marketing]
+    source: Common names.
+  - aliases: [accounting, finance, accountancy]
+    subject_ids: [accounting_and_finance]
+    source: Common names (subject exists only in 2015).
+  - aliases: [english, english literature, creative writing]
+    subject_ids: [english, english_and_creative_writing]
+    source: Common names; ids from the 5.3 lineage.
+  - aliases: [classics, ancient history]
+    subject_ids: [classics, classics_and_ancient_history]
+    source: Common names; ids from the 5.3 lineage.
+  - aliases: [archaeology, forensics, forensic science]
+    subject_ids: [archaeology_and_forensics, archaeology, forensic_science_and_archaeology]
+    source: Common names; ids from the 5.3 lineage.
+  - aliases: [tourism, hospitality, events, event management]
+    subject_ids: [tourism_transport_and_travel, hospitality_event_management_and_tourism]
+    source: Common names; ids from the 5.3 lineage.
+  - aliases: [maths, math, mathematics]
+    subject_ids: [mathematics]
+    source: Common names.
+  - aliases: [medicine, medical school, med]
+    subject_ids: [medicine]
+    source: Common names.
+  - aliases: [vet, vet science, veterinary, veterinary medicine]
+    subject_ids: [veterinary_science]
+    source: Common names.
+  - aliases: [economics, econ]
+    subject_ids: [economics]
+    source: Common names.
+  - aliases: [law, llb]
+    subject_ids: [law]
+    source: Common names.
+  - aliases: [psychology, psych]
+    subject_ids: [psychology]
+    source: Common names.
+  - aliases: [nursing, midwifery]
+    subject_ids: [nursing_and_midwifery]
+    source: Common names.
+  - aliases: [pharmacy, pharmacology]
+    subject_ids: [pharmacy_and_pharmacology]
+    source: Common names.
+  - aliases: [languages, modern languages, linguistics]
+    subject_ids: [modern_languages_and_linguistics]
+    source: Common names.
+  - aliases: [drama, dance]
+    subject_ids: [drama_and_dance]
+    source: Common names.
+  - aliases: [sport, sports science, sport science]
+    subject_ids: [sports_science]
+    source: Common names.
+  - aliases: [geography, environmental studies]
+    subject_ids: [geography_and_environmental_studies]
+    source: Common names.
+  - aliases: [politics, political science]
+    subject_ids: [politics]
+    source: Common names.
+  - aliases: [theology, religious studies]
+    subject_ids: [religious_studies_and_theology]
+    source: Common names.
+  - aliases: [mechanical engineering]
+    subject_ids: [engineering_mechanical]
+    source: Common names.
+  - aliases: [civil engineering]
+    subject_ids: [engineering_civil]
+    source: Common names.
+  - aliases: [chemical engineering]
+    subject_ids: [engineering_chemical]
+    source: Common names.
+  - aliases: [electrical engineering, electronic engineering, electronics]
+    subject_ids: [engineering_electronic_and_electrical]
+    source: Common names.
+
+university_lineage:
+  - { from: glamorgan, to: south_wales, type: merged_into, data_year: 2015,
+      note: "Glamorgan and Newport merged to form the University of South Wales (2013). The data lists Glamorgan and Newport up to 2013 and South Wales from 2015.",
+      source: "University of South Wales history; years as they appear in this data." }
+  - { from: newport, to: south_wales, type: merged_into, data_year: 2015,
+      note: "Glamorgan and Newport merged to form the University of South Wales (2013). The data lists Glamorgan and Newport up to 2013 and South Wales from 2015.",
+      source: "University of South Wales history; years as they appear in this data." }
+
+subject_lineage:
+  - { from: archaeology_and_forensics, to: archaeology, type: renamed, year: 2014, source: data }
+  - { from: archaeology, to: forensic_science_and_archaeology, type: renamed, year: 2015, source: data }
+  - { from: tourism_transport_and_travel, to: hospitality_event_management_and_tourism, type: renamed, year: 2015, source: data, approximate: true }
+  - { from: art_and_design, to: art, type: split_into, year: 2015, source: data, approximate: true }
+  - { from: art_and_design, to: design_and_crafts, type: split_into, year: 2015, source: data, approximate: true }
+  - { from: art_and_design, to: fashion_and_textiles, type: split_into, year: 2015, source: data, approximate: true }
+  - { from: classics, to: classics_and_ancient_history, type: renamed, year: 2015, source: data }
+  - { from: english, to: english_and_creative_writing, type: renamed, year: 2015, source: data }
+  - { from: history_and_history_of_art, to: history, type: split_into, year: 2015, source: data, approximate: true }
+  - { from: history_and_history_of_art, to: history_of_art, type: split_into, year: 2015, source: data, approximate: true }
+  - { from: media_studies_communications_and_librarianship, to: media_and_film_studies, type: split_into, year: 2015, source: data, approximate: true }
+  - { from: media_studies_communications_and_librarianship, to: journalism_publishing_and_public_relations, type: split_into, year: 2015, source: data, approximate: true }
+  - { from: media_studies_communications_and_librarianship, to: film_production_and_photography, type: split_into, year: 2015, source: data, approximate: true }
+  - { from: computer_sciences_and_it, to: computer_science_and_information_systems, type: renamed, year: 2015, source: "data + DQ4 relabel" }
+  - { from: business_management_and_marketing, to: accounting_and_finance, type: split_out, year: 2015, source: "data (DQ11)", approximate: true }

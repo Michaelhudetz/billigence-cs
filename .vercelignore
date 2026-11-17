@@ -1,0 +1,12 @@
+.env*
+!.env.example
+CLAUDE.md
+data/
+scripts/
+supabase/
+eval/
+*.test.ts
+docs/
+
+# Markdown (progress notes, decisions, docs) is never uploaded
+*.md

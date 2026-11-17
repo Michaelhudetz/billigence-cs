@@ -1,0 +1,157 @@
+gold:
+  - id: demo_2nd
+    expect: answer
+    sql: |
+      SELECT university_name, rank FROM clean.overall_ranking WHERE year = 2015 AND rank = 2
+    reasoning: "No year in the question beyond 2015; overall table, rank value 2 (all ties returned)."
+  - id: demo_2nd_metric
+    expect: answer
+    sql: |
+      SELECT university_name, value_added FROM (
+        SELECT university_name, value_added, RANK() OVER (ORDER BY value_added DESC) AS r
+        FROM clean.overall_ranking WHERE year = 2015 AND value_added IS NOT NULL
+      ) t WHERE r = 2
+    reasoning: "Selected metric is value_added (higher is better); 2nd place by that metric in 2015, ties included, nulls excluded."
+  - id: demo_definition
+    expect: definition
+    reasoning: "Asks for the meaning of a metric; answered from the semantic layer, no SQL."
+  - id: demo_oxbridge
+    expect: answer
+    sql: |
+      SELECT university_name, rank FROM clean.overall_ranking
+      WHERE year = 2015 AND university_id IN ('oxford', 'cambridge')
+    reasoning: "Oxbridge = Oxford and Cambridge; 'do' interpreted as overall rank in 2015."
+  - id: demo_ssr
+    expect: answer
+    sql: |
+      SELECT university_name, student_staff_ratio FROM clean.overall_ranking
+      WHERE year = 2015 AND student_staff_ratio = (
+        SELECT MIN(student_staff_ratio) FROM clean.overall_ranking WHERE year = 2015)
+    reasoning: "Lower ratio is better, so best = minimum; all ties returned."
+  - id: demo_improved
+    expect: answer
+    sql: |
+      SELECT university_name, places_climbed FROM clean.overall_ranking
+      WHERE year = 2015 AND places_climbed = (
+        SELECT MAX(places_climbed) FROM clean.overall_ranking WHERE year = 2015)
+    reasoning: "Overall table; places_climbed (prev_rank - rank, recomputed) for 2015 vs 2014, maximum with ties."
+  - id: demo_south_wales
+    expect: answer
+    sql: |
+      SELECT university_name, rank FROM clean.overall_ranking
+      WHERE year = 2013 AND university_id IN ('glamorgan', 'newport')
+    reasoning: "South Wales did not exist in 2013; return its predecessors Glamorgan and Newport."
+  - id: demo_cs_top5
+    expect: answer
+    sql: |
+      SELECT university_name, rank FROM clean.subject_ranking
+      WHERE year = 2015 AND subject_id = 'computer_science_and_information_systems' AND rank <= 5
+      ORDER BY rank, university_name
+    reasoning: "Subject table, Computer Science & Information Systems 2015, rank <= 5 including ties."
+  - id: demo_nightlife
+    expect: decline
+    reasoning: "Nightlife is not in the data."
+  - id: rank_bath_2014
+    expect: answer
+    sql: |
+      SELECT university_name, rank FROM clean.overall_ranking WHERE year = 2014 AND university_id = 'bath'
+    reasoning: "Overall rank of Bath (not Bath Spa) in 2014."
+  - id: alias_lse_2013
+    expect: answer
+    sql: |
+      SELECT university_name, rank FROM clean.overall_ranking WHERE year = 2013 AND university_id = 'lse'
+    reasoning: "LSE alias for London School of Economics; overall rank 2013."
+  - id: typo_edinburgh
+    expect: answer
+    sql: |
+      SELECT university_name, rank FROM clean.overall_ranking WHERE year = 2015 AND university_id = 'edinburgh'
+    reasoning: "Typo for Edinburgh (not Edinburgh Napier); overall rank 2015."
+  - id: count_2014
+    expect: answer
+    sql: |
+      SELECT COUNT(*) AS n FROM clean.overall_ranking WHERE year = 2014
+    reasoning: "Count of institutions in the overall ranking in 2014."
+  - id: worst_2014
+    expect: answer
+    sql: |
+      SELECT university_name, rank FROM clean.overall_ranking
+      WHERE year = 2014 AND rank = (SELECT MAX(rank) FROM clean.overall_ranking WHERE year = 2014)
+    reasoning: "Last = highest rank value in 2014, ties included."
+  - id: top3_spend_2013
+    expect: answer
+    sql: |
+      SELECT university_name, expenditure_per_student FROM (
+        SELECT university_name, expenditure_per_student,
+               RANK() OVER (ORDER BY expenditure_per_student DESC) AS r
+        FROM clean.overall_ranking WHERE year = 2013 AND expenditure_per_student IS NOT NULL
+      ) t WHERE r <= 3 ORDER BY expenditure_per_student DESC, university_name
+    reasoning: "Spending per student, higher is better, overall table 2013, top 3 including ties."
+  - id: rg_satisfaction
+    expect: answer
+    sql: |
+      SELECT university_name, nss_overall FROM clean.overall_ranking
+      WHERE year = 2015 AND nss_overall = (
+        SELECT MAX(nss_overall) FROM clean.overall_ranking
+        WHERE year = 2015 AND university_id IN ('birmingham','bristol','cambridge','cardiff','durham','edinburgh','exeter','glasgow','imperial','kings_college_london','leeds','liverpool','lse','manchester','newcastle','nottingham','oxford','queen_mary','queens_belfast','sheffield','southampton','ucl','warwick','york'))
+        AND university_id IN ('birmingham','bristol','cambridge','cardiff','durham','edinburgh','exeter','glasgow','imperial','kings_college_london','leeds','liverpool','lse','manchester','newcastle','nottingham','oxford','queen_mary','queens_belfast','sheffield','southampton','ucl','warwick','york')
+    reasoning: "Overall student satisfaction = nss_overall; max among Russell Group members in 2015, ties included."
+  - id: law_careers_top10
+    expect: answer
+    sql: |
+      SELECT university_name, career_prospects FROM (
+        SELECT university_name, career_prospects, RANK() OVER (ORDER BY career_prospects DESC) AS r
+        FROM clean.subject_ranking WHERE year = 2014 AND subject_id = 'law' AND career_prospects IS NOT NULL
+      ) t WHERE r <= 10 ORDER BY career_prospects DESC, university_name
+    reasoning: "Law 2014 by career_prospects descending, top 10 including ties."
+  - id: cs_13th_tie
+    expect: answer
+    sql: |
+      SELECT university_name, rank FROM clean.subject_ranking
+      WHERE year = 2015 AND subject_id = 'computer_science_and_information_systems' AND rank = 13
+    reasoning: "Rank value 13 in CS&IS 2015; all tied rows."
+  - id: accounting_1st
+    expect: answer
+    sql: |
+      SELECT university_name, rank FROM clean.subject_ranking
+      WHERE year = 2015 AND subject_id = 'accounting_and_finance' AND rank = 1
+    reasoning: "Accounting & Finance 2015, rank 1, ties included."
+  - id: economics_climber
+    expect: answer
+    sql: |
+      SELECT university_name, places_climbed FROM clean.subject_ranking
+      WHERE year = 2015 AND subject_id = 'economics' AND places_climbed = (
+        SELECT MAX(places_climbed) FROM clean.subject_ranking WHERE year = 2015 AND subject_id = 'economics')
+    reasoning: "Economics subject table, 2015, max places_climbed, ties included."
+  - id: art_design_2015
+    expect: clarification
+    reasoning: "Art and design ended in 2014 and was split into several subjects in 2015; user must choose."
+  - id: compare_kcl_ucl
+    expect: answer
+    sql: |
+      SELECT university_name, guardian_score FROM clean.overall_ranking
+      WHERE year = 2015 AND university_id IN ('kings_college_london', 'ucl')
+    reasoning: "Guardian score of both in overall table 2015."
+  - id: trend_bath
+    expect: answer
+    sql: |
+      SELECT year, university_name, rank FROM clean.overall_ranking
+      WHERE university_id = 'bath' AND year BETWEEN 2013 AND 2015 ORDER BY year
+    reasoning: "Bath overall rank for each year 2013-2015."
+  - id: missing_suffolk
+    expect: answer
+    sql: |
+      SELECT university_name, expenditure_per_student FROM clean.overall_ranking
+      WHERE year = 2015 AND university_id = 'suffolk'
+    reasoning: "Row exists with NULL spending; answer is 'no data'."
+  - id: decline_predict
+    expect: decline
+    reasoning: "Prediction of future data is not answerable."
+  - id: decline_address
+    expect: decline
+    reasoning: "Address is not in the data."
+  - id: decline_injection
+    expect: decline
+    reasoning: "Prompt injection / destructive request."
+  - id: decline_knowledge
+    expect: decline
+    reasoning: "Asks for world ranking from model knowledge; data covers only UK Guardian tables."
